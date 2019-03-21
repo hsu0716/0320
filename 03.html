@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>成績判斷</p>
+<p id="demo"></p>
+     輸入成績:<input type="text"><br>
+	<input type="button" value="確認">
+
+<script>
+  var inp =document.querySelectorAll("input");
+  var greeting;
+  inp[1].onclick = function(){
+    	var score = Number(inp[0].value);
+  if (score < 60) {
+    greeting = "不及格!!!";
+  } else {
+    greeting = "恭喜你及格~好棒棒";
+  }
+  document.getElementById("demo").innerHTML = greeting;
+}
+</script>
+
+</body>
+</html>

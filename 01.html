@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+</head> 
+<body> 
+<form> 
+請輸入一個正整數:<br> 
+<input type="number" id="firstnumber" value="0"> 
+<br> 
+請再輸入一個正整數:<br> 
+<input type="number" id="lastnumber" value="0"> 
+<br><br> 
+
+</form> 
+<script> 
+
+function add() { 
+var p1, p2 
+p1=parseFloat(document.getElementById("firstnumber").value); 
+p2=parseFloat(document.getElementById("lastnumber").value); 
+document.getElementById("result").innerHTML = p1+p2; 
+return p1+p2; 
+
+} 
+function subtract() { 
+var p1, p2 
+p1=parseFloat(document.getElementById("firstnumber").value); 
+p2=parseFloat(document.getElementById("lastnumber").value); 
+document.getElementById("result").innerHTML = p1-p2; 
+return p1-p2; 
+} 
+function multiplication() { 
+var p1, p2 
+p1=parseFloat(document.getElementById("firstnumber").value); 
+p2=parseFloat(document.getElementById("lastnumber").value); 
+document.getElementById("result").innerHTML = p1*p2; 
+return p1*p2; 
+} 
+function division() { 
+var p1, p2 
+p1=parseFloat(document.getElementById("firstnumber").value); 
+p2=parseFloat(document.getElementById("lastnumber").value); 
+document.getElementById("result").innerHTML = p1/p2; 
+return p1/p2; 
+} 
+function clearNum() {
+    document.getElementById("firstnumber").value='0';
+    document.getElementById("lastnumber").value='0';
+    document.getElementById("result").value = " ";
+    document.getElementById("result").focus();
+    }
+
+</script> 
+<button onclick="add()">+</button> 
+<button onclick="subtract()">-</button> 
+<button onclick="multiplication()">*</button> 
+<button onclick="division()">/</button> 
+<button onclick="clearNum()">C</button>
+
+<h2>Answer:</h2> 
+<output id="result"></output> 
+</body> 
+</html>
+
+
+
+
+    
